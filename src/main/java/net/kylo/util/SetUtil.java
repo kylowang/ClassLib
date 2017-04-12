@@ -64,4 +64,20 @@ public class SetUtil {
     public static <T> Set<T> complement(Set<T> a, Set<T> b) {
         return difference(union(a, b), intersection(a, b));
     }
+
+    public static void main(String[] args) {
+        Set a = new HashSet<Integer>();
+        Set b = new HashSet<Integer>();
+
+        a.add(1);
+        a.add(2);
+
+        b.add(2);
+        b.add(3);
+
+        System.out.println(union(a, b));
+        System.out.println(intersection(a, b));
+        System.out.println(difference(a, b));
+        System.out.println(complement(a, b));
+    }
 }
